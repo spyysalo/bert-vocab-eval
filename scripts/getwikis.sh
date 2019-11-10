@@ -18,8 +18,9 @@ if [ -e "$WIKIEXDIR" ]; then
     echo "$WIKIEXDIR exists, skipping clone ..." >&2
 else
     git clone 'https://github.com/attardi/wikiextractor.git'
-    
-    mv "wikiextractor" "$WIKIEXDIR"
+    if [ ! "wikiextractor" -ef "$WIKIEXDIR" ]; then
+	mv "wikiextractor" "$WIKIEXDIR"
+    fi
 fi
 
 BASE_URL="https://dumps.wikimedia.org"

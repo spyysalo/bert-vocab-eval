@@ -5,6 +5,13 @@ samples of text.
 
 ## Quickstart
 
++Get BERT submodule
+
+```
+git submodule init
+git submodule update
+```
+
 Download BERT vocabularies
 
 ```

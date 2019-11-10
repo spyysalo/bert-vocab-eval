@@ -18,7 +18,8 @@ for url in "$GOOGLE_BASE_URL/2018_10_18/cased_L-12_H-768_A-12.zip" \
 	   "$GOOGLE_BASE_URL/2018_10_18/uncased_L-12_H-768_A-12.zip" \
 	   "$GOOGLE_BASE_URL/2018_11_23/multi_cased_L-12_H-768_A-12.zip" \
 	   "$GOOGLE_BASE_URL/2018_11_03/multilingual_L-12_H-768_A-12.zip" \
-	   "$UTU_BASE_URL/bert-base-finnish-cased.zip"; do
+	   "$UTU_BASE_URL/bert-base-finnish-cased.zip" \
+	   "$UTU_BASE_URL/bert-base-finnish-uncased.zip"; do
     b=$(basename "$url" .zip)
     if [ -e "$DATADIR/$b/vocab.txt" ]; then
 	echo "$b/vocab.txt exists, skipping ..." >&2
